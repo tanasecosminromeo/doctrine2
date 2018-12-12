@@ -2166,7 +2166,7 @@ class UnitOfWork implements PropertyChangedListener
 
                     $this->originalEntityData[$oid][$field] = $data[$field];
 
-                    continue;
+                    break;
                 }
 
                 // Inject collection
@@ -2183,7 +2183,7 @@ class UnitOfWork implements PropertyChangedListener
 
                 $this->originalEntityData[$oid][$field] = $pColl;
 
-                continue;
+                break;
             }
 
             if (! $association->isOwningSide()) {
