@@ -487,7 +487,7 @@ class SchemaTool
         }
 
         if ($fieldMetadata->isUnique()) {
-            $table->addUniqueIndex([$columnName]);
+            $table->addUniqueIndex([$columnName], null, $options);
         }
 
         return $column;
